@@ -17,10 +17,19 @@
 	 height : 100vh;
 	    background-color : red;}</style>
   <body>
+	  <script>
+	  function appHeight() {
+    const doc = document.documentElement
+    doc.style.setProperty('--vh', (window.innerHeight*.01) + 'px');
+  }
+
+  window.addEventListener('resize', appHeight);
+  appHeight();
+	  </script>
   <div class="main">
   <h1 style="margin-top: 0;">Hello World</h1>
   </div>
   
-	<script src="index.js"></script>
+	
   </body>
 </html>
