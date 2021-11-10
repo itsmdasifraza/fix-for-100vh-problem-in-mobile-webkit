@@ -1,51 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-	<style>
-    body{
-	    margin: 0;
-	    padding : 0;
-     
-    }
-		
-	.main{
-		 height: 100vh; 
-  height: calc(var(--vh, 1vh) * 100);
-		 background-color : red;
-		    overflow-y: hidden;
-	}
-	.cont{
-		 height: 100vh; 
-  height: calc(var(--vh, 1vh) * 100);
-/* 		 background-color : red; */
-		    overflow-y: scroll;
-	}</style>
-  <body>
-	  <script>
-	 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-		  // We listen to the resize event
-window.addEventListener('resize', () => {
-  // We execute the same script as before
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-});
-	  </script>
-  <div class="main">
-	  <div class="cont">
-		  <input type="text">
-  <h1 style="margin-top: 0;">Hello World</h1><h1 style="margin-top: 0;">Hello World</h1><h1 style="margin-top: 0;">Hello World</h1><h1 style="margin-top: 0;">Hello World</h1><h1 style="margin-top: 0;">Hello World</h1><h1 style="margin-top: 0;">Hello World</h1><h1 style="margin-top: 0;">Hello World</h1><h1 style="margin-top: 0;">Hello World</h1><h1 style="margin-top: 0;">Hello World</h1><h1 style="margin-top: 0;">Hello World</h1><h1 style="margin-top: 0;">Hello World</h1><h1 style="margin-top: 0;">Hello World</h1><h1 style="margin-top: 0;">Hello World</h1><h1 style="margin-top: 0;">Hello World</h1><h1 style="margin-top: 0;">Hello World</h1><h1 style="margin-top: 0;">Hello World</h1><h1 style="margin-top: 0;">Hello World-last</h1>
-    </div>
-	  </div>
-  
-	
-  </body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Fix for 100vh Problem in Mobile Webkit</title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <style>
+      body{
+        margin: 0;
+        padding : 0; 
+      }
+      .main-fix{
+        height: 100vh; 
+        height: calc(var(--vh, 1vh) * 100);
+      	overflow-y: hidden;
+      }
+      .container-fix{
+      	height: 100vh; 
+      	height: calc(var(--vh, 1vh) * 100);
+      	overflow-y: scroll;
+      }
+   </style>
+   <body>
+      <script>
+         // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+         let vh = window.innerHeight * 0.01;
+         // Then we set the value in the --vh custom property to the root of the document
+         document.documentElement.style.setProperty('--vh', `${vh}px`);
+           // We listen to the resize event
+         window.addEventListener('resize', () => {
+         // We execute the same script as before
+         	let vh = window.innerHeight * 0.01;
+         	document.documentElement.style.setProperty('--vh', `${vh}px`);
+         });     
+      </script>
+	   
+      <div class="main-fix">
+         <div class="container-fix">
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			   Sit amet venenatis urna cursus eget nunc. Ut eu sem integer vitae. Odio ut enim blandit volutpat maecenas volutpat. 
+			   Leo vel fringilla est ullamcorper eget nulla facilisi. Venenatis urna cursus eget nunc scelerisque viverra mauris in. 
+			   Enim neque volutpat ac tincidunt vitae semper quis lectus. Cursus vitae congue mauris rhoncus aenean vel. 
+			   Pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Sed euismod nisi porta lorem mollis aliquam ut. 
+			   Massa id neque aliquam vestibulum morbi. Sem et tortor consequat id porta nibh venenatis cras sed.</p>
+		   <p>Nam at lectus urna duis convallis convallis tellus. Viverra mauris in aliquam sem fringilla ut morbi. 
+			   Libero justo laoreet sit amet. Ac turpis egestas maecenas pharetra convallis posuere morbi. 
+			   Tellus pellentesque eu tincidunt tortor aliquam nulla. Eget magna fermentum iaculis eu non. Adipiscing elit duis tristique 
+			   sollicitudin nibh sit amet commodo nulla. Pulvinar sapien et ligula ullamcorper. Consequat semper viverra nam libero justo laoreet
+			   sit amet.Non pulvinar neque laoreet suspendisse interdum consectetur libero. Augue neque gravida in fermentum et sollicitudin ac. Tempor
+			   orci dapibus ultrices in. Congue eu consequat ac felis donec et. Amet porttitor eget dolor morbi non. Turpis massa tincidunt dui ut. 
+			   Amet nisl suscipit adipiscing bibendum est ultricies. Viverra justo nec ultrices dui sapien.</p>
+		   <p>Et ultrices neque ornare aenean euismod elementum nisi quis. Pellentesque sit amet porttitor eget dolor morbi non arcu. Tempor
+			   orci eu lobortis elementum nibh tellus molestie. Ut faucibus pulvinar elementum integer enim neque volutpat ac. Consectetur 
+			   adipiscing elit duis tristique sollicitudin nibh sit amet commodo. Bibendum at varius vel pharetra vel turpis nunc eget. 
+			   Pellentesque habitant morbi tristique senectus et netus et. Risus pretium quam vulputate dignissim suspendisse in est ante in.
+			   Nunc faucibus a pellentesque sit amet porttitor eget dolor morbi. Ullamcorper eget nulla facilisi etiam dignissim diam. Id 
+			   semper risus in hendrerit gravida rutrum quisque non. Gravida neque convallis a cras semper auctor. Est ultricies integer 
+			   quis auctor. Ultricies integer quis auctor elit. Fermentum posuere urna nec tincidunt praesent semper. Nunc scelerisque 
+			   viverra mauris in aliquam sem. Euismod in pellentesque massa placerat duis ultricies. Quam adipiscing vitae proin sagittis
+			   nisl. Sed id semper risus in hendrerit.</p>
+		   <p>Suspendisse in est ante in nibh mauris cursus mattis. Ut porttitor leo a diam sollicitudin tempor id. Scelerisque fermentum 
+			   dui faucibus in ornare. Adipiscing elit duis tristique sollicitudin nibh sit amet. Euismod elementum nisi quis eleifend quam 
+			   adipiscing vitae. Lacus laoreet non curabitur gravida arcu ac. Arcu dictum varius duis at consectetur lorem donec massa. 
+			   Tincidunt vitae semper quis lectus. Turpis massa tincidunt dui ut ornare lectus. Sed egestas egestas fringilla phasellus 
+			   faucibus. Integer enim neque volutpat ac tincidunt vitae semper. Mattis aliquam faucibus purus in massa tempor nec feugiat. 
+			   Diam in arcu cursus euismod. Vulputate dignissim suspendisse in est ante in nibh mauris. Nulla facilisi nullam vehicula 
+			   ipsum a arcu cursus vitae congue. Ut tellus elementum sagittis vitae et leo duis ut diam. Sit amet nulla facilisi morbi. 
+			   Gravida dictum fusce ut placerat.</p>
+		   <p>Egestas sed sed risus pretium quam. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Tristique senectus et netus
+			   et malesuada fames ac. Eget velit aliquet sagittis id. Faucibus nisl tincidunt eget nullam non nisi est sit amet. Amet luctus
+			   venenatis lectus magna fringilla. Nunc sed velit dignissim sodales ut eu. Semper quis lectus nulla at volutpat. Nam at lectus urna
+			   duis convallis convallis. Diam maecenas ultricies mi eget mauris pharetra et ultrices neque. Nunc consequat interdum varius sit
+			   amet mattis vulputate. Molestie at elementum eu facilisis sed odio. Feugiat sed lectus vestibulum mattis. At auctor urna nunc
+			   id cursus metus. Ultrices in iaculis nunc sed augue lacus viverra. Elit sed vulputate mi sit amet.</p>
+         </div>
+      </div>
+	   
+   </body>
 </html>
