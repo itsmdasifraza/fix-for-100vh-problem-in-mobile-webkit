@@ -12,3 +12,6 @@ body{
     height: calc(var(--vh, 1vh) * 100);
     overflow-y: scroll;
 }
+p{
+    text-align : justify;
+}
